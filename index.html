@@ -7,7 +7,6 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
         }
@@ -19,12 +18,33 @@
             max-width: 100%;
             height: auto;
         }
-        section {
-            margin: 20px;
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #f1f1f1;
+            border-bottom: 1px solid #ccc;
         }
-        section h2 {
+        .tab {
+            padding: 14px 20px;
+            cursor: pointer;
+            font-weight: bold;
             text-align: center;
-            margin-bottom: 10px;
+            flex: 1;
+            border-bottom: 3px solid transparent;
+            transition: border-color 0.3s ease-in-out;
+        }
+        .tab:hover {
+            border-bottom: 3px solid #0078d7;
+        }
+        .tab.active {
+            border-bottom: 3px solid #0078d7;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        .tab-content.active {
+            display: block;
         }
         .image-container {
             display: flex;
@@ -54,7 +74,13 @@
         </p>
     </header>
 
-    <section id="find-wallet">
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('find-wallet')">Find Wallet Address</div>
+        <div class="tab" onclick="showTab('buy-usdt')">Buy USDT</div>
+        <div class="tab" onclick="showTab('send-usdt')">Send USDT</div>
+    </div>
+
+    <div id="find-wallet" class="tab-content active">
         <h2>Find Your USDT Wallet Address</h2>
         <div class="image-container">
             <img src="Blofin USDT trade instructions/findMyWalletAddress-1.jpg" alt="Find Wallet Address Step 1">
@@ -72,9 +98,9 @@
             <img src="Blofin USDT trade instructions/findMyWalletAddress-4.jpg" alt="Find Wallet Address Step 4">
             <p>خطوة 4: اتبع التعليمات لحفظ العنوان.</p>
         </div>
-    </section>
+    </div>
 
-    <section id="buy-usdt">
+    <div id="buy-usdt" class="tab-content">
         <h2>Buy USDT</h2>
         <div class="image-container">
             <img src="Blofin USDT trade instructions/buyUSDT-1.jpg" alt="Buy USDT Step 1">
@@ -100,9 +126,9 @@
             <img src="Blofin USDT trade instructions/buyUSDT-6.jpg" alt="Buy USDT Step 6">
             <p>خطوة 6: نجاح عملية الشراء.</p>
         </div>
-    </section>
+    </div>
 
-    <section id="send-usdt">
+    <div id="send-usdt" class="tab-content">
         <h2>Send USDT to Another Wallet</h2>
         <div class="image-container">
             <img src="Blofin USDT trade instructions/sendUSDTfromMyWalletToAnotherWallet-1.jpg" alt="Send USDT Step 1">
@@ -124,6 +150,24 @@
             <img src="Blofin USDT trade instructions/sendUSDTfromMyWalletToAnotherWallet-5.jpg" alt="Send USDT Step 5">
             <p>خطوة 5: تأكيد العملية.</p>
         </div>
-    </section>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            document.querySelector(`#${tabId}`).classList.add('active');
+            document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
 </body>
 </html>
