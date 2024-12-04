@@ -6,20 +6,32 @@
     <title>إرشادات تداول USDT باستخدام Blofin</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Cairo', Arial, sans-serif; /* Professional Arabic font */
             direction: rtl;
             text-align: right;
             margin: 0;
             padding: 0;
+            color: #333333; /* Dark gray for body text */
         }
         header {
             text-align: center;
             padding: 20px;
+            color: #1A73E8; /* Professional blue for headers */
+        }
+        header strong {
+            font-size: 18px;
+        }
+        header a {
+            color: #0056B3; /* Link blue */
+            text-decoration: none;
+        }
+        header a:hover {
+            color: #004494; /* Darker blue for hover effect */
         }
         .tabs {
             display: flex;
             justify-content: center;
-            background-color: #f1f1f1;
+            background-color: #f9f9f9;
             border-bottom: 1px solid #ccc;
         }
         .tab {
@@ -29,13 +41,15 @@
             text-align: center;
             flex: 1;
             border-bottom: 3px solid transparent;
-            transition: border-color 0.3s ease-in-out;
+            color: #1A73E8; /* Tab text color */
+            transition: border-color 0.3s ease-in-out, color 0.3s;
         }
         .tab:hover {
-            border-bottom: 3px solid #0078d7;
+            border-bottom: 3px solid #1A73E8;
         }
         .tab.active {
-            border-bottom: 3px solid #0078d7;
+            border-bottom: 3px solid #1A73E8;
+            color: #1A73E8;
         }
         .tab-content {
             display: none;
@@ -44,13 +58,19 @@
         .tab-content.active {
             display: block;
         }
+        h2 {
+            font-size: 24px;
+            color: #1A73E8; /* Professional blue for headings */
+        }
         .image-container {
-            margin-bottom: 50px; /* Space between image sections */
+            margin-bottom: 30px;
         }
         .image-container p {
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto 10px auto; /* Space between description and image */
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0 auto 10px auto;
+            color: #333333; /* Dark gray for text */
         }
         .image-container img {
             display: block;
@@ -58,22 +78,33 @@
             max-width: 600px;
             height: auto;
             margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 4px; /* Subtle rounding for a clean look */
         }
     </style>
 </head>
 <body>
     <header>
         <p>
-            <strong>قم بتنزيل تطبيق Blofin:</strong><br>
-            <a href="https://play.google.com/store/apps/details?id=com.blofin.android" target="_blank">متجر Google Play</a> | 
-            <a href="https://apps.apple.com/us/app/blofin/id1616804346" target="_blank">متجر Apple App Store</a>
-        </p>
+            <h2>قم بتنزيل تطبيق Blofin لأجهزة الأندرويد عن طريق هذا الرابط <a href="https://play.google.com/store/apps/details?id=com.blofin.android" target="_blank">متجر Google Play</a> <br>
+أو قم بتنزيله على أجهزة آيفون عن طريق هذا الرابط  <a href="https://apps.apple.com/us/app/blofin/id1616804346" target="_blank">متجر Apple App Store</a>
+<br>
+<br>
+بعد تنزيل وتشغيل التطبيق قم بإنشاء حساب وتسجيل الدخول، ثم اتبع الخطوات في الأسفل لكي تعرف عنوان محفظة USDT الخاص بك الذي ستحتاجه في حال أردت أن تشتري عملة USDT من تجار هذه العملة في بلدك، فما عليك إلا تزويدهم بعنوان محفظتك ليرسلوا لك المبلغ الذي اشتريته منهم.
+<br>
+<br>
+إذا كنت لا ترغب بشراء عملة USDT من التجار في بلدك فيمكنك شرائها عن طريق بطاقتك الائتمانية أو بطاقة البنك (فيزا أو ماستر كارد) ولكن قد يكون هذا الخيار أكثر كلفة من ناحية العمولة. خطوات عملية الشراء هذه تجدها في الأسفل في قسم (شراء USDT عن طريق فيزا أو ماستركارد)
+<br>
+<br>
+بعد شراء الكمية المطلوبة من عملة USDT اتبع الخطوات المذكورة في قسم (إرسال مبلغ USDT إلى محفظة القسام) في الأسفل لإرسال المبلغ لمحفظة القسام.
+       </h2>
+	   </p>
     </header>
 
     <div class="tabs">
         <div class="tab active" onclick="showTab('find-wallet')">العثور على عنوان المحفظة</div>
-        <div class="tab" onclick="showTab('buy-usdt')">شراء USDT</div>
-        <div class="tab" onclick="showTab('send-usdt')">إرسال USDT</div>
+        <div class="tab" onclick="showTab('buy-usdt')">شراء USDT عن طريق فيزا أو ماستركارد</div>
+        <div class="tab" onclick="showTab('send-usdt')">إرسال مبلغ USDT إلى محفظة القسام</div>
     </div>
 
     <div id="find-wallet" class="tab-content active">
