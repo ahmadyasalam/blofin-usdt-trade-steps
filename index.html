@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
-<head>
+<html lang="ar"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إرشادات تداول USDT باستخدام Blofin</title>
@@ -72,6 +71,14 @@
             margin: 0 auto 10px auto;
             color: #333333; /* Dark gray for text */
         }
+		.note {
+            text-align: center;
+            font-size: 16px;
+			font-weight: bold;
+            line-height: 1.6;
+            margin: 0 auto 10px auto;
+            color: red; /* Dark gray for text */
+        }
         .image-container img {
             display: block;
             width: 100%;
@@ -86,43 +93,72 @@
 <body>
     <header>
         <p>
-            <h2>قم بتنزيل تطبيق Blofin لأجهزة الأندرويد عن طريق هذا الرابط <a href="https://play.google.com/store/apps/details?id=com.blofin.android" target="_blank">متجر Google Play</a> <br>
+            </p><h2>قم بتنزيل تطبيق Blofin لأجهزة الأندرويد عن طريق هذا الرابط <a href="https://play.google.com/store/apps/details?id=com.blofin.android" target="_blank">متجر Google Play</a> <br>
 أو قم بتنزيله على أجهزة آيفون عن طريق هذا الرابط  <a href="https://apps.apple.com/us/app/blofin/id1616804346" target="_blank">متجر Apple App Store</a>
 <br>
 <br>
-بعد تنزيل وتشغيل التطبيق قم بإنشاء حساب وتسجيل الدخول، ثم اتبع الخطوات في الأسفل لكي تعرف عنوان محفظة USDT الخاص بك الذي ستحتاجه في حال أردت أن تشتري عملة USDT من تجار هذه العملة في بلدك، فما عليك إلا تزويدهم بعنوان محفظتك ليرسلوا لك المبلغ الذي اشتريته منهم.
-<br>
+بعد تنزيل وتشغيل التطبيق قم بإنشاء حساب عن طريق اتباع الخطوات الموضحة في الأسفل في قسم (إنشاء حساب (sign up)) ثم قم بتسجيل الدخول، ثم اتبع الخطوات في الأسفل في قسم (العثور على عنوان محفظة USDT) لكي تعرف عنوان محفظة USDT الخاص بك الذي ستحتاجه في حال أردت أن تشتري عملة USDT من تجار هذه العملة في بلدك، فما عليك إلا تزويدهم بعنوان محفظتك ليرسلوا لك المبلغ الذي اشتريته منهم.<br>
 <br>
 إذا كنت لا ترغب بشراء عملة USDT من التجار في بلدك فيمكنك شرائها عن طريق بطاقتك الائتمانية أو بطاقة البنك (فيزا أو ماستر كارد) ولكن قد يكون هذا الخيار أكثر كلفة من ناحية العمولة. خطوات عملية الشراء هذه تجدها في الأسفل في قسم (شراء USDT عن طريق فيزا أو ماستركارد)
 <br>
 <br>
 بعد شراء الكمية المطلوبة من عملة USDT اتبع الخطوات المذكورة في قسم (إرسال مبلغ USDT إلى محفظة القسام) في الأسفل لإرسال المبلغ لمحفظة القسام.
        </h2>
+	   <br>
+	   <br>
+	   <p class="note">
+	   ملاحظة: القسام يتعامل بعملة USDT (TRC20)
 	   </p>
+	   <p></p>
     </header>
 
     <div class="tabs">
-        <div class="tab active" onclick="showTab('find-wallet')">العثور على عنوان المحفظة</div>
+		<div class="tab" onclick="showTab('sign-up')">إنشاء حساب (sign up)</div>
+        <div class="tab" onclick="showTab('find-wallet')">العثور على عنوان المحفظة</div>
         <div class="tab" onclick="showTab('buy-usdt')">شراء USDT عن طريق فيزا أو ماستركارد</div>
-        <div class="tab" onclick="showTab('send-usdt')">إرسال مبلغ USDT إلى محفظة القسام</div>
+        <div class="tab active" onclick="showTab('send-usdt')">إرسال مبلغ USDT إلى محفظة القسام</div>
     </div>
-
-    <div id="find-wallet" class="tab-content active">
+	
+	 <div id="sign-up" class="tab-content">
+        <h2>إنشاء حساب جديد (sign up)</h2>
+        <div class="image-container">
+            <p>الخطوة 1: اضغط على زر Sign up / Log in.</p>
+            <img src="Blofin USDT trade instructions/signUp-1.jpg" alt="الخطوة 1: العثور على عنوان المحفظة">
+        </div>
+        <div class="image-container">
+            <p>الخطوة 2: اضغك على Sign up.</p>
+            <img src="Blofin USDT trade instructions/signUp-2.jpg" alt="الخطوة 2: متابعة التعليمات">
+        </div>
+        <div class="image-container">
+            <p>الخطوة 3: أدخل البريد الإلكتروني وكلمة السر واضغط زر Sign up.</p>
+            <img src="Blofin USDT trade instructions/signUp-3.jpg" alt="الخطوة 3: فتح التطبيق">
+        </div>
+        <div class="image-container">
+            <p>الخطوة 4: أكمل عملية التحقق.</p>
+            <img src="Blofin USDT trade instructions/signUp-4.jpg" alt="الخطوة 4: اتباع التعليمات">
+		</div>
+		<div class="image-container">
+            <p>الخطوة 5: أدخل الرمز السري الذي تم إرساله إلى بريدك الإلكتروني.</p>
+            <img src="Blofin USDT trade instructions/signUp-5.jpg" alt="الخطوة 5: اتباع التعليمات">
+        </div>    
+		</div>
+	
+    <div id="find-wallet" class="tab-content">
         <h2>العثور على عنوان محفظة USDT</h2>
         <div class="image-container">
-            <p>الخطوة 1: العثور على عنوان محفظة USDT الخاص بك.</p>
+            <p>الخطوة 1: اضغط زر Deposit.</p>
             <img src="Blofin USDT trade instructions/findMyWalletAddress-1.jpg" alt="الخطوة 1: العثور على عنوان المحفظة">
         </div>
         <div class="image-container">
-            <p>الخطوة 2: متابعة التعليمات الموضحة على الشاشة.</p>
+            <p>الخطوة 2: اختر خيار USDT.</p>
             <img src="Blofin USDT trade instructions/findMyWalletAddress-2.jpg" alt="الخطوة 2: متابعة التعليمات">
         </div>
         <div class="image-container">
-            <p>الخطوة 3: افتح التطبيق واتبع الخطوات.</p>
+            <p>الخطوة 3: اختر خيار Tron (TRC20).</p>
             <img src="Blofin USDT trade instructions/findMyWalletAddress-3.jpg" alt="الخطوة 3: فتح التطبيق">
         </div>
         <div class="image-container">
-            <p>الخطوة 4: اتبع التعليمات لحفظ العنوان.</p>
+            <p>الخطوة 4: ستجد في هذه الصفحة عنوان المحفظة الخاص بك.</p>
             <img src="Blofin USDT trade instructions/findMyWalletAddress-4.jpg" alt="الخطوة 4: اتباع التعليمات">
         </div>
     </div>
@@ -130,19 +166,19 @@
     <div id="buy-usdt" class="tab-content">
         <h2>شراء USDT</h2>
         <div class="image-container">
-            <p>الخطوة 1: كيفية شراء عملة USDT.</p>
+            <p>الخطوة 1: اضغط Buy Crypto.</p>
             <img src="Blofin USDT trade instructions/buyUSDT-1.jpg" alt="الخطوة 1: شراء USDT">
         </div>
         <div class="image-container">
-            <p>الخطوة 2: اتبع التعليمات الموضحة لإتمام الشراء.</p>
+            <p>الخطوة 2: اختر USDT.</p>
             <img src="Blofin USDT trade instructions/buyUSDT-2.jpg" alt="الخطوة 2: إتمام الشراء">
         </div>
         <div class="image-container">
-            <p>الخطوة 3: اختيار المبلغ المراد شراؤه.</p>
+            <p>الخطوة 3: أدخل المبلغ الذي تريد شراءه.</p>
             <img src="Blofin USDT trade instructions/buyUSDT-3.jpg" alt="الخطوة 3: اختيار المبلغ">
         </div>
         <div class="image-container">
-            <p>الخطوة 4: التأكد من تفاصيل المعاملة.</p>
+            <p>الخطوة 4: اختر Simplex.</p>
             <img src="Blofin USDT trade instructions/buyUSDT-4.jpg" alt="الخطوة 4: تأكيد التفاصيل">
         </div>
         <div class="image-container">
@@ -150,31 +186,31 @@
             <img src="Blofin USDT trade instructions/buyUSDT-5.jpg" alt="الخطوة 5: تأكيد الشراء">
         </div>
         <div class="image-container">
-            <p>الخطوة 6: نجاح عملية الشراء.</p>
+            <p>الخطوة 6: أدخل تفاصيل بطاقتك ثم أتمم عملية الشراء.</p>
             <img src="Blofin USDT trade instructions/buyUSDT-6.jpg" alt="الخطوة 6: نجاح العملية">
         </div>
     </div>
 
-    <div id="send-usdt" class="tab-content">
+    <div id="send-usdt" class="tab-content active">
         <h2>إرسال USDT إلى محفظة أخرى</h2>
         <div class="image-container">
-            <p>الخطوة 1: كيفية إرسال USDT إلى محفظة أخرى.</p>
+            <p>الخطوة 1: اضغط على Wallet.</p>
             <img src="Blofin USDT trade instructions/sendUSDTfromMyWalletToAnotherWallet-1.jpg" alt="الخطوة 1: إرسال USDT">
         </div>
         <div class="image-container">
-            <p>الخطوة 2: إدخال عنوان المحفظة المستلمة.</p>
+            <p>الخطوة 2: اضغط على Withdraw.</p>
             <img src="Blofin USDT trade instructions/sendUSDTfromMyWalletToAnotherWallet-2.jpg" alt="الخطوة 2: إدخال العنوان">
         </div>
         <div class="image-container">
-            <p>الخطوة 3: تحديد المبلغ المراد إرساله.</p>
+            <p>الخطوة 3: اختر USDT.</p>
             <img src="Blofin USDT trade instructions/sendUSDTfromMyWalletToAnotherWallet-3.jpg" alt="الخطوة 3: تحديد المبلغ">
         </div>
         <div class="image-container">
-            <p>الخطوة 4: التحقق من تفاصيل الإرسال.</p>
+            <p>الخطوة 4: اختر Tron (TRC20).</p>
             <img src="Blofin USDT trade instructions/sendUSDTfromMyWalletToAnotherWallet-4.jpg" alt="الخطوة 4: التحقق من التفاصيل">
         </div>
         <div class="image-container">
-            <p>الخطوة 5: تأكيد العملية.</p>
+            <p>الخطوة 5: أدخل عنوان المحفظة والمبلغ وثم اضغط زر Withdraw.</p>
             <img src="Blofin USDT trade instructions/sendUSDTfromMyWalletToAnotherWallet-5.jpg" alt="الخطوة 5: تأكيد العملية">
         </div>
     </div>
@@ -196,5 +232,6 @@
             document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
         }
     </script>
+
 </body>
 </html>
