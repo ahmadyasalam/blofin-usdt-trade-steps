@@ -113,13 +113,13 @@
     </header>
 
     <div class="tabs">
-		<div class="tab" onclick="showTab('sign-up')">إنشاء حساب (sign up)</div>
+		<div class="tab active" onclick="showTab('sign-up')">إنشاء حساب (sign up)</div>
         <div class="tab" onclick="showTab('find-wallet')">العثور على عنوان المحفظة</div>
         <div class="tab" onclick="showTab('buy-usdt')">شراء USDT عن طريق فيزا أو ماستركارد</div>
-        <div class="tab active" onclick="showTab('send-usdt')">إرسال مبلغ USDT إلى محفظة القسام</div>
+        <div class="tab" onclick="showTab('send-usdt')">إرسال مبلغ USDT إلى محفظة القسام</div>
     </div>
 	
-	 <div id="sign-up" class="tab-content">
+	 <div id="sign-up" class="tab-content active">
         <h2>إنشاء حساب جديد (sign up)</h2>
         <div class="image-container">
             <p>الخطوة 1: اضغط على زر Sign up / Log in.</p>
@@ -191,7 +191,7 @@
         </div>
     </div>
 
-    <div id="send-usdt" class="tab-content active">
+    <div id="send-usdt" class="tab-content">
         <h2>إرسال USDT إلى محفظة أخرى</h2>
         <div class="image-container">
             <p>الخطوة 1: اضغط على Wallet.</p>
@@ -233,5 +233,4 @@
         }
     </script>
 
-</body>
-</html>
+</body></html>
